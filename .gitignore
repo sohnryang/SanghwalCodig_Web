@@ -1,0 +1,12 @@
+# Created by https://www.gitignore.io/api/ht,visualstudiocode
+
+#!! ERROR: ht is undefined. Use list command to see defined gitignore types !!#
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# End of https://www.gitignore.io/api/ht,visualstudiocode
