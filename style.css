@@ -1,20 +1,25 @@
-header {
-    border-bottom: 1px solid gray;
-    padding: 20px;
-}
-nav {
-    border-right: 1px solid gray;
-    width: 200px;
-    height: 600px;
-    float: left;
-}
-nav ol {
-    list-style: none;
-}
 article {
     float: left;
     padding: 20px;
 }
+
+header {
+    border-bottom: 1px solid gray;
+    padding: 20px;
+}
+
 h2 {
     font-size: 30px;
 }
+
+nav {
+    border-right: 1px gray solid;
+    float: left;
+    height: 600px;
+    width: 200px;
+}
+
+nav ol {
+    list-style: none;
+}
+
