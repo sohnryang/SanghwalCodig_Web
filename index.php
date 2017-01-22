@@ -6,13 +6,14 @@
 </head>
 <body id="target">
     <header>
+        <img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/course/94.png">
         <h1><a href="http://localhost/">JavaScript</a></h1>
     </header>
     <nav>
         <ol>
-            <li><a href="http://localhost/page_html.html">JavaScript란?</a></li>
-            <li><a href="http://localhost/page_vc.html">변수와 상수</a></li>
-            <li><a href="http://localhost/page_op.html">연산자</a></li>
+            <?php
+                echo file_get_contents("list.txt");
+            ?>
         </ol>
     </nav>
     <div id="control">
@@ -20,6 +21,11 @@
         <input type="button" value="Black" onclick="document.getElementById('target').className = 'black'"/>
     </div>
     <article>
+        <?php
+            if (empty($_GET['id']) == false) {
+                echo file_get_contents($_GET['id'].".txt");
+            }
+        ?>
     </article>
 </body>
 </html>
