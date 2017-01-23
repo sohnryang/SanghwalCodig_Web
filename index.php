@@ -12,7 +12,11 @@
     <nav>
         <ol>
             <?php
-                echo file_get_contents("list.txt");
+                $conn = mysqli_connect("localhost", "root", "P4ssw0rd_T3st", "opentutorials");
+                $result = mysqli_query($conn, "SELECT * FROM topic");
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo '<li><a href="http://localhost/index.php?id='.$row['id'].'">'.$row['title'],'</a></li>'."\n";
+                }
             ?>
         </ol>
     </nav>
@@ -22,9 +26,11 @@
     </div>
     <article>
         <?php
-            if (empty($_GET['id']) == false) {
-                echo file_get_contents($_GET['id'].".txt");
-            }
+            $result = mysqli_query($conn, "SELECT * FROM topic");
+            if(!empty($_GET['id']))
+                while($row = mysqli_fetch_assoc($result))
+                    if($row['id'] == $_GET['id'])
+                        echo $row['description'];
         ?>
     </article>
 </body>
