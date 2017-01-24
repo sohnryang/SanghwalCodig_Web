@@ -5,6 +5,7 @@
 article {
     float: left;
     padding: 20px;
+    width: 500px;
 }
 
 body.black {
@@ -36,5 +37,6 @@ nav {
 
 nav ol {
     list-style: none;
+    padding: 0;
 }
 
